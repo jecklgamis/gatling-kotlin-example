@@ -64,7 +64,7 @@ jobs:
           # Copy content
           mkdir -p src/main/kotlin/${GROUP//.//}
           cp -R .github/template-files/* .
-          cp -R src/main/java/gatling/test/example/* src/main/kotlin/${GROUP//.//}/
+          cp -R src/main/kotlin/gatling/test/example/* src/main/kotlin/${GROUP//.//}/
 
           # Clean up
           rm -rf \
