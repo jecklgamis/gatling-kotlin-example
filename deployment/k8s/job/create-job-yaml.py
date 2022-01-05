@@ -23,10 +23,10 @@ def parse_args():
                         default=f"gatling-kotlin-example-{id}",
                         help='Job name')
     parser.add_argument('--java_opts',
-                        default='-DbaseUrl=http://localhost:8080 -DrequestPerSecond=10 -DdurationMin=0.25',
+                        default='-DbaseUrl=http://localhost:8080 -DrequestPerSecond=10 -DdurationMin=1',
                         help='Java opts')
     parser.add_argument('--simulation',
-                        default="gatling.test.example.simulation.ExampleGetSimulation",
+                        default="gatling.test.example.simulation.ExampleSimulation",
                         help='Simulation name')
     return parser.parse_args()
 
