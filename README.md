@@ -1,5 +1,7 @@
 # gatling-kotlin-example
 
+[![Build](https://github.com/jecklgamis/gatling-kotlin-example/actions/workflows/build.yml/badge.svg)](https://github.com/jecklgamis/gatling-kotlin-example/actions/workflows/build.yml)
+
 An example Gatling Maven project using Kotlin DSL.
 
 ## Building
