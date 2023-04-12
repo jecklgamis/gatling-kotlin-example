@@ -15,12 +15,12 @@
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
-            <version>1.8.0</version>
+            <version>1.8.20</version>
         </dependency>
         <dependency>
             <groupId>io.gatling.highcharts</groupId>
             <artifactId>gatling-charts-highcharts</artifactId>
-            <version>3.9.0</version>
+            <version>3.9.3</version>
         </dependency>
     </dependencies>
 
