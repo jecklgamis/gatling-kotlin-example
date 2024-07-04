@@ -2,12 +2,15 @@
 
 [![Build](https://github.com/jecklgamis/gatling-kotlin-example/actions/workflows/build.yml/badge.svg)](https://github.com/jecklgamis/gatling-kotlin-example/actions/workflows/build.yml)
 
-An example Gatling Maven project using Kotlin DSL.
+An example Gatling Maven project using Java DSL.
+
+## Requirements
+* Java 21
 
 ## Building
 
 ```
-mvn clean package
+./mvnw clean package
 ```
 
 ## Running
@@ -23,28 +26,24 @@ java ${JAVA_OPTS} -cp target/gatling-kotlin-example.jar io.gatling.app.Gatling -
 Using the Gatling Maven plugin (`run-simulation-using-plugin.sh`):
 
 ```bash
-./mvnw test -Pperf-test
+./mvnw -DsimulationClass=gatling.test.example.simulation.ExampleSimulation gatling:test
 ```
 
 Using the Docker container (`run-simulation-using-docker.sh`):
 
 ```bash
+./mvnw clean package
 docker build -t gatling-kotlin-example:main .
 docker run -e "JAVA_OPTS=-DbaseUrl=http://some-target-host:8080 -DdurationMin=1 -DrequestPerSecond=10" \
 -e SIMULATION_NAME=gatling.test.example.simulation.ExampleSimulation gatling-kotlin-example:main
 ```
 
-## Working With Makefile
-
-Build executable jar and Docker image
-
+As Kubernetes Job:
+* Ensure you have [Helm](https://helm.sh/) installed and can deploy to a Kubernetes cluster locally.
+```bash
+cd deployment/k8s/helm
+make package install
 ```
-make dist image
-```
 
-Run Docker image:
 
-```
-make run
-```
 
