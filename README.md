@@ -2,7 +2,7 @@
 
 [![Build](https://github.com/jecklgamis/gatling-kotlin-example/actions/workflows/build.yml/badge.svg)](https://github.com/jecklgamis/gatling-kotlin-example/actions/workflows/build.yml)
 
-An example Gatling Maven project using Java DSL.
+An example Gatling Maven project using Kotlin DSL.
 
 ## Requirements
 * Java 21
