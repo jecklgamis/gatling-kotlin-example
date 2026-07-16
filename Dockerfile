@@ -3,7 +3,7 @@ LABEL maintainer="Jerrico Gamis <jecklgamis@gmail.com>"
 
 RUN apt update -y && apt install -y bash curl && apt clean all && rm -rf /var/lib/apt/lists/*
 
-ENV APP_HOME /app
+ENV APP_HOME=/app
 RUN mkdir -m 0755 -p ${APP_HOME}/bin
 
 COPY target/gatling-kotlin-example.jar ${APP_HOME}/bin/
